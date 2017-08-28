@@ -8,13 +8,15 @@ The `chosen-rails` gem integrates the `Chosen` with the Rails asset pipeline.
 
 ### Install chosen-rails gem
 
-Include `chosen-rails` in Gemefile
+Include `chosen-rails` in Gemfile
 
 ```rb
 gem 'chosen-rails'
 ```
 
 Then run `bundle install`
+
+Please consider [jquery-turbolinks](https://github.com/kossnocorp/jquery.turbolinks) if you have turbolinks issues for Rails 4 +.
 
 ### Include chosen javascript assets
 
@@ -73,7 +75,7 @@ Also add the class to your form field
 If you use simple form as form builder
 
 ```erb
-<%= f.association :author, 
+<%= f.association :author,
                   collection: User.all,
                   include_blank: true,
                   input_html: { class: 'chosen-select' }
